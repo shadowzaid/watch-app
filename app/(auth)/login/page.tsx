@@ -28,10 +28,10 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="w-full max-w-[380px] bg-black/80 backdrop-blur-sm rounded-xl px-10 py-12 shadow-2xl">
+    <div className="w-full max-w-[460px] bg-black/85 backdrop-blur-sm rounded-2xl px-14 py-14 shadow-2xl">
 
       {/* Title */}
-      <h1 className="text-[28px] font-bold text-white mb-2">Sign In</h1>
+      <h1 className="text-[34px] font-bold text-white mb-2">Sign In</h1>
       <p className="text-gray-400 text-sm mb-8">Welcome back. Enter your details below.</p>
 
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -45,11 +45,11 @@ export default function LoginPage() {
             onChange={e => setEmail(e.target.value)}
             required
             placeholder=" "
-            className="peer w-full px-4 pt-5 pb-2 bg-[#2a2a2a] text-white rounded-lg border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-sm"
+            className="peer w-full px-5 pt-6 pb-2 bg-[#2a2a2a] text-white rounded-xl border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-base"
           />
           <label
             htmlFor="email"
-            className="absolute left-4 top-2 text-[10px] font-semibold tracking-widest uppercase text-gray-400 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-placeholder-shown:font-normal peer-placeholder-shown:tracking-normal peer-focus:top-2 peer-focus:text-[10px] peer-focus:font-semibold peer-focus:tracking-widest peer-focus:text-[#E50914] transition-all pointer-events-none"
+            className="absolute left-5 top-2 text-[10px] font-semibold tracking-widest uppercase text-gray-400 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-placeholder-shown:tracking-normal peer-focus:top-2 peer-focus:text-[10px] peer-focus:font-semibold peer-focus:tracking-widest peer-focus:text-[#E50914] transition-all pointer-events-none"
           >
             Email
           </label>
@@ -64,11 +64,11 @@ export default function LoginPage() {
             onChange={e => setPassword(e.target.value)}
             required
             placeholder=" "
-            className="peer w-full px-4 pt-5 pb-2 pr-12 bg-[#2a2a2a] text-white rounded-lg border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-sm"
+            className="peer w-full px-5 pt-6 pb-2 pr-14 bg-[#2a2a2a] text-white rounded-xl border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-base"
           />
           <label
             htmlFor="password"
-            className="absolute left-4 top-2 text-[10px] font-semibold tracking-widest uppercase text-gray-400 peer-placeholder-shown:top-4 peer-placeholder-shown:text-sm peer-placeholder-shown:font-normal peer-placeholder-shown:tracking-normal peer-focus:top-2 peer-focus:text-[10px] peer-focus:font-semibold peer-focus:tracking-widest peer-focus:text-[#E50914] transition-all pointer-events-none"
+            className="absolute left-5 top-2 text-[10px] font-semibold tracking-widest uppercase text-gray-400 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-placeholder-shown:tracking-normal peer-focus:top-2 peer-focus:text-[10px] peer-focus:font-semibold peer-focus:tracking-widest peer-focus:text-[#E50914] transition-all pointer-events-none"
           >
             Password
           </label>
@@ -93,7 +93,7 @@ export default function LoginPage() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3.5 bg-[#E50914] hover:bg-red-700 active:bg-red-800 text-white font-bold rounded-lg text-sm transition-colors disabled:opacity-60 disabled:cursor-not-allowed mt-2"
+          className="w-full py-4 bg-[#E50914] hover:bg-red-700 active:bg-red-800 text-white font-bold rounded-xl text-base transition-colors disabled:opacity-60 disabled:cursor-not-allowed mt-2"
         >
           {loading ? (
             <span className="flex items-center justify-center gap-2">

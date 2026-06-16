@@ -37,48 +37,40 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit} className="space-y-5">
 
         {/* Email field */}
-        <div className="relative">
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1.5">Email</label>
           <input
             id="email"
             type="email"
             value={email}
             onChange={e => setEmail(e.target.value)}
             required
-            placeholder=" "
-            className="peer w-full px-5 pt-6 pb-2 bg-[#2a2a2a] text-white rounded-xl border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-base"
+            placeholder="Enter your email"
+            className="w-full px-5 py-4 bg-[#2a2a2a] text-white rounded-xl border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-base placeholder:text-gray-500"
           />
-          <label
-            htmlFor="email"
-            className="absolute left-5 top-2 text-[10px] font-semibold tracking-widest uppercase text-gray-400 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-placeholder-shown:tracking-normal peer-focus:top-2 peer-focus:text-[10px] peer-focus:font-semibold peer-focus:tracking-widest peer-focus:text-[#E50914] transition-all pointer-events-none"
-          >
-            Email
-          </label>
         </div>
 
         {/* Password field */}
-        <div className="relative">
-          <input
-            id="password"
-            type={showPassword ? 'text' : 'password'}
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-            required
-            placeholder=" "
-            className="peer w-full px-5 pt-6 pb-2 pr-14 bg-[#2a2a2a] text-white rounded-xl border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-base"
-          />
-          <label
-            htmlFor="password"
-            className="absolute left-5 top-2 text-[10px] font-semibold tracking-widest uppercase text-gray-400 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:font-normal peer-placeholder-shown:tracking-normal peer-focus:top-2 peer-focus:text-[10px] peer-focus:font-semibold peer-focus:tracking-widest peer-focus:text-[#E50914] transition-all pointer-events-none"
-          >
-            Password
-          </label>
-          <button
-            type="button"
-            onClick={() => setShowPassword(v => !v)}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors text-xs font-semibold tracking-wide"
-          >
-            {showPassword ? 'HIDE' : 'SHOW'}
-          </button>
+        <div>
+          <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-1.5">Password</label>
+          <div className="relative">
+            <input
+              id="password"
+              type={showPassword ? 'text' : 'password'}
+              value={password}
+              onChange={e => setPassword(e.target.value)}
+              required
+              placeholder="Enter your password"
+              className="w-full px-5 py-4 pr-20 bg-[#2a2a2a] text-white rounded-xl border border-[#3a3a3a] focus:outline-none focus:border-[#E50914] transition-colors text-base placeholder:text-gray-500"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(v => !v)}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors text-xs font-semibold tracking-wide"
+            >
+              {showPassword ? 'HIDE' : 'SHOW'}
+            </button>
+          </div>
         </div>
 
         {/* Error */}
